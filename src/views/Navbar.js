@@ -12,7 +12,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Header = () => {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [link, setLink] = useState("Todos");
 
@@ -144,4 +144,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

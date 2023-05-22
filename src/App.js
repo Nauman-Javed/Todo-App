@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import MainTodo from "./pages/MainTodo";
-import ImportantTodos from "./pages/ImportantTodos";
-import Header from "./pages/Header";
+import MainTodo from "./views/MainTodo";
+import ImportantTodos from "./views/ImportantTodos";
 import { StyledBox } from "./components";
+import Navbar from "./views/Navbar";
 
 function App() {
   return (
     <StyledBox>
-      <Header />
+      <Navbar />
       <Routes>
         <Route path="/" element={<MainTodo />} />
         <Route path="/important" element={<ImportantTodos />} />
