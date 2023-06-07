@@ -2,16 +2,19 @@ import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import { UseTodo } from "../context/Context";
+import { useDispatch } from "react-redux";
+import { todolistActions } from "../store/TodoList";
 
 const Input = () => {
   const [todo, setTodo] = useState("");
-  const { Add } = UseTodo();
+  const dispatch = useDispatch();
+
 
   const ClickHandler = () => {
     if (!todo) {
       return;
     } else {
-      Add(todo);
+      dispatch(todolistActions.Add(todo));
       setTodo("");
     }
   };
